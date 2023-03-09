@@ -325,6 +325,6 @@ streams	1
 Finalmente publique  una línea adicional usando el productor iniciado en donde se incluya su nombre y apellido y realice una captura de pantalla  de la salida del consumidor (Captura2).
 
 ## 7. Instrucciones para la Entrega y Evaluación.
-El alumno debe subir una carpeta al moodle en donde se incluyan las dos capturas solicitadas.
+El alumno debe subir un fichero pdf a moodle en donde se incluyan las dos capturas solicitadas y una descripción de las mismas.
 
 
