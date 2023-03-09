@@ -42,7 +42,7 @@ Dentro de la máquina virtual abra un terminal y realice los siguientes pasos.
 
 Cambiar el directorio de trabajo para ejecutar los binario de la distribución de Kafka:
 ```
-cd ./Downloads/kafka_2.13-3.4.0
+cd ./Downloads/kafka_2.12-3.4.0
 ```
 
 Iniciar el servicio de Kafka con KRaft:
@@ -235,7 +235,8 @@ bin/kafka-topics.sh --create \
 Iniciar el programa para empezar a contar las palabras de los eventos publicados en el tópico `ibdn-input-events`
 
 ```
-bin/kafka-run-class.sh ../../P4_KAFKA/src/org.apache.kafka.streams.examples.wordcount.WordCountDemo
+cd /home/ibdn/P4_KAFKA/wordCount
+java -cp target/uber-kafka-streams-wordcount-1.0-SNAPSHOT.jar es.upm.dit.ibdn.WordCountDemo
 ```
 
 Iniciar un productor y un consumidor para que publiquen y consuman del tópico mostrado anteriormente y de streams-wordcount-output respectivamente:
@@ -268,6 +269,22 @@ hola estos son los eventos que van a ser contados por el programa de kafka
 En la salida de la consola del consumidor debería obtener la siguiente salida:
 
 ```
+hola	1
+estos	1
+son	1
+los	1
+eventos	1
+que	1
+van	1
+a	1
+ser	1
+contados	1
+por	1
+el	1
+programa	1
+de	1
+kafka	1
+
 
 ```
 
@@ -280,6 +297,28 @@ El programa utiliza el api de kafka streams
 En la terminal del consumidor debería verse la siguiente salida:
 
 ```
+hola	1
+estos	1
+son	1
+los	1
+eventos	1
+que	1
+van	1
+a	1
+ser	1
+contados	1
+por	1
+el	1
+programa	1
+de	1
+kafka	1
+programa	2
+utiliza	1
+el	3
+api	1
+de	2
+kafka	2
+streams	1
 
 ```
 
