@@ -61,7 +61,7 @@ bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c config/server.p
 Iniciar el servicio de Kafka:
 
 ```
-bin/kafka-server-start.sh config/kraft/server.properties
+bin/kafka-server-start.sh config/server.properties
 ```
 Al ejecutar dicho comando el servicio de Kafka se habrá arrancado y como salida se verán los logs de inicialización, recuerde no cerrar el teminal a menos que se quiera detener dicho servicio.
 
