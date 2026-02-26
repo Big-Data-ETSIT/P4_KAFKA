@@ -235,7 +235,7 @@ bin/kafka-topics.sh --create \
 Iniciar el programa para empezar a contar las palabras de los eventos publicados en el tópico `ibdn-input-events`
 
 ```
-cd /home/ibdn/P4_KAFKA/wordCount
+cd ./P4_KAFKA/wordCount
 java -cp target/uber-kafka-streams-wordcount-1.0-SNAPSHOT.jar es.upm.dit.ibdn.WordCountDemo
 ```
 
@@ -250,14 +250,16 @@ bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic ibdn-inp
 Abrir otro terminal e inicar el consumidor:
 
 ```
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \
-    --topic streams-wordcount-output \
-    --from-beginning \
-    --formatter kafka.tools.DefaultMessageFormatter \
-    --property print.key=true \
-    --property print.value=true \
-    --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
-    --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic streams-wordcount-output \
+  --from-beginning \
+  --formatter org.apache.kafka.tools.consumer.DefaultMessageFormatter \
+  --property print.key=true \
+  --property print.value=true \
+  --property key.separator=" : " \
+  --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
+  --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
 ```
 
 Procesar ciertos datos:
