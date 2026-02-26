@@ -16,7 +16,7 @@
 
 Para realizar la práctica el alumno deberá tener instalado en su ordenador:
 - Herramienta GIT para gestión de repositorios [Github](https://git-scm.com/downloads)
-- Apache Kafka + KRaft 3.4.0 [Kafka](https://kafka.apache.org/downloads)
+- Apache Kafka + KRaft 4.2.0 [Kafka](https://kafka.apache.org/downloads)
 - Máquina virtual con sistema operativo linux y distribución Ubuntu 22.04 (Disponible en el enlace compartido en moodle) 
 
 
@@ -42,7 +42,7 @@ Dentro de la máquina virtual abra un terminal y realice los siguientes pasos.
 
 Cambiar el directorio de trabajo para ejecutar los binario de la distribución de Kafka:
 ```
-cd ./Downloads/kafka_2.12-3.4.0
+cd ./Downloads/kafka_2.13-4.2.0
 ```
 
 Iniciar el servicio de Kafka con KRaft:
@@ -55,7 +55,7 @@ KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"
 Indicar el formato de logs:
 
 ```
-bin/kafka-storage.sh format -t $KAFKA_CLUSTER_ID -c config/kraft/server.properties
+bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c config/server.properties
 ```
 
 Iniciar el servicio de Kafka:
