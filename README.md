@@ -142,7 +142,7 @@ nano config/connect-standalone.properties
 Identificar la línea en donde se encuentra la propiedad `plugin.path` y modificarla para que quede de la siguiente forma:
 
 ```
-plugin.path=libs/connect-file-3.4.0.jar
+plugin.path=libs/connect-file-4.2.0.jar
 ```
 
 Abra otro terminal y clone el proyecto utilizando la siguiente instrucción:
