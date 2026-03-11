@@ -17,7 +17,7 @@
 Para realizar la práctica el alumno deberá tener instalado en su ordenador:
 - Herramienta GIT para gestión de repositorios [Github](https://git-scm.com/downloads)
 - Apache Kafka + KRaft 4.2.0 [Kafka](https://kafka.apache.org/downloads)
-- Máquina virtual con sistema operativo linux y distribución Ubuntu 22.04 (Disponible en el enlace compartido en moodle) 
+
 
 
 ## 3. Descripción de la práctica
